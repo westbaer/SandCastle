@@ -1,0 +1,10 @@
+Package: sandcastle
+Name: sandcastle
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Access nearly every directory from a sandboxed application.
+Maintainer: Nicolas Haunold <westbaer@gmail.com>
+Author: Nicolas Haunold <westbaer@gmail.com>
+Section: Development
+Tag: role:hacker
