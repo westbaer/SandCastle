@@ -10,5 +10,6 @@
 - (NSString *)temporaryPathForFileName:(NSString *)fileName;
 - (void)moveTemporaryFile:(NSString *)file toResolvedPath:(NSString *)path;
 - (void)removeItemAtResolvedPath:(NSString *)path;
+- (void)createDirectoryAtResolvedPath:(NSString *)path;
 
 @end

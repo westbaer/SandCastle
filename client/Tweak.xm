@@ -35,6 +35,13 @@ static SandCastle *sharedInstance = nil;
 	[center sendMessageName:@"RemoveNotification" userInfo:_params];
 }
 
+- (void)createDirectoryAtResolvedPath:(NSString *)path {
+	NSDictionary *_params = [NSDictionary dictionaryWithObjectsAndKeys:	path, @"SandCastleResolvedPath",
+																		nil, nil];
+	
+	[center sendMessageName:@"CreateDirectoryNotification" userInfo:_params];	
+}
+
 #pragma mark -
 #pragma mark Singleton Stuff
 
@@ -77,7 +84,7 @@ static SandCastle *sharedInstance = nil;
 @end
 
 
-static __attribute__((constructor)) void YourTubeHDInitialize() {
+static __attribute__((constructor)) void SandCastleClientInitialize() {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	
 	%init;
