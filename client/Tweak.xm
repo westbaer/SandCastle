@@ -17,7 +17,7 @@ static SandCastle *sharedInstance = nil;
 	CFUUIDRef uuidObj = CFUUIDCreate(nil);
 	NSString *newUUID = (NSString *)CFUUIDCreateString(nil, uuidObj);
 	CFRelease(uuidObj);
-	return [@"/var/mobile/Library/Preferences" stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@", [newUUID autorelease], [fileName pathExtension]]];
+	return [@"/tmp/" stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@", [newUUID autorelease], [fileName pathExtension]]];
 }
 
 - (void)moveTemporaryFile:(NSString *)file toResolvedPath:(NSString *)path {
